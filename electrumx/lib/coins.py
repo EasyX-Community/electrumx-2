@@ -616,6 +616,9 @@ class Bitcoin(BitcoinMixin, Coin):
 class Pexacoin(BitcoinMixin, Coin):
     NAME = "Pexacoin"
     SHORTNAME = "PEXA"
+    TX_COUNT = 318337769
+    TX_COUNT_HEIGHT = 524213
+    TX_PER_BLOCK = 1400
     DESERIALIZER = lib_tx.DeserializerSegWit
     MEMPOOL_HISTOGRAM_REFRESH_SECS = 120
     PEERS = []
