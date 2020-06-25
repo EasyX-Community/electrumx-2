@@ -622,6 +622,7 @@ class Pexacoin(BitcoinMixin, Coin):
     DESERIALIZER = lib_tx.DeserializerSegWit
     MEMPOOL_HISTOGRAM_REFRESH_SECS = 120
     PEERS = []
+    GENESIS_HASH = ( 'a0fe25098b8560b76e4c9fdd28117bd06709515a9ccbbc1fa578e4c0443c0d02' )
 
     @classmethod
     def warn_old_client_on_tx_broadcast(cls, client_ver):
