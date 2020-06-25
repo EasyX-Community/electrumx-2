@@ -613,6 +613,26 @@ class Bitcoin(BitcoinMixin, Coin):
         return False
 
 
+class Pexacoin(BitcoinMixin, Coin):
+    NAME = "Pexacoin"
+    SHORTNAME = "PEXA"
+    DESERIALIZER = lib_tx.DeserializerSegWit
+    MEMPOOL_HISTOGRAM_REFRESH_SECS = 120
+    PEERS = []
+
+    @classmethod
+    def warn_old_client_on_tx_broadcast(cls, client_ver):
+        if client_ver < (3, 3, 3):
+            return ('<br/><br/>'
+                    'Your transaction was successfully broadcast.<br/><br/>'
+                    'However, you are using a VULNERABLE version of Electrum.<br/>'
+                    'Download the new version from the usual place:<br/>'
+                    'https://electrum.org/'
+                    '<br/><br/>')
+        return False
+    
+
+
 class BitcoinSegwit(Bitcoin):
     NAME = "BitcoinSegwit"  # support legacy name
 
