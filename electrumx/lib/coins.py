@@ -611,19 +611,6 @@ class Bitcoin(BitcoinMixin, Coin):
                     'https://electrum.org/'
                     '<br/><br/>')
         return False
-
-
-class Pexacoin(Ravencoin, Coin):
-    NAME = "Pexacoin"
-    SHORTNAME = "PEXA"
-    TX_COUNT = 1
-    TX_COUNT_HEIGHT = 1
-    TX_PER_BLOCK = 1
-    X16RV2_ACTIVATION_TIME = 1568678400
-    DESERIALIZER = lib_tx.DeserializerSegWit
-    MEMPOOL_HISTOGRAM_REFRESH_SECS = 120
-    PEERS = []
-    GENESIS_HASH = ( 'a0fe25098b8560b76e4c9fdd28117bd06709515a9ccbbc1fa578e4c0443c0d02' )
     
 
 
@@ -3108,6 +3095,19 @@ class Ravencoin(Coin):
         else:
             import x16r_hash
             return x16r_hash.getPoWHash(header)
+
+
+class Pexacoin(Ravencoin, Coin):
+    NAME = "Pexacoin"
+    SHORTNAME = "PEXA"
+    TX_COUNT = 1
+    TX_COUNT_HEIGHT = 1
+    TX_PER_BLOCK = 1
+    X16RV2_ACTIVATION_TIME = 1568678400
+    DESERIALIZER = lib_tx.DeserializerSegWit
+    MEMPOOL_HISTOGRAM_REFRESH_SECS = 120
+    PEERS = []
+    GENESIS_HASH = ( 'a0fe25098b8560b76e4c9fdd28117bd06709515a9ccbbc1fa578e4c0443c0d02' )
 
 
 class RavencoinTestnet(Ravencoin):
