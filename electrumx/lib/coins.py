@@ -616,13 +616,13 @@ class Bitcoin(BitcoinMixin, Coin):
 class Pexacoin(BitcoinMixin, Coin):
     NAME = "Pexacoin"
     SHORTNAME = "PEXA"
-    TX_COUNT = 318337769
-    TX_COUNT_HEIGHT = 524213
-    TX_PER_BLOCK = 1400
+    TX_COUNT = 0
+    TX_COUNT_HEIGHT = 0
+    TX_PER_BLOCK = 0
     DESERIALIZER = lib_tx.DeserializerSegWit
     MEMPOOL_HISTOGRAM_REFRESH_SECS = 120
     PEERS = []
-    GENESIS_HASH = ( 'a0fe25098b8560b76e4c9fdd28117bd06709515a9ccbbc1fa578e4c0443c0d02' )
+    GENESIS_HASH = ( '000000b3f4b347d4a1fb2f2a8f42d5fc33094a49858608e511c0d45f51628b85' )
 
     @classmethod
     def warn_old_client_on_tx_broadcast(cls, client_ver):
