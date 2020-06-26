@@ -619,7 +619,10 @@ class Pexacoin(Bitcoin, Coin):
     TX_COUNT = 1
     TX_COUNT_HEIGHT = 1
     TX_PER_BLOCK = 1
+    XPUB_VERBYTES = bytes.fromhex("0488b21e")
+    XPRV_VERBYTES = bytes.fromhex("0488ade4")
     P2PKH_VERBYTE = bytes.fromhex("75") #Address starts with a x
+    P2SH_VERBYTES = [bytes.fromhex("5A")]
     DESERIALIZER = lib_tx.DeserializerSegWit
     MEMPOOL_HISTOGRAM_REFRESH_SECS = 120
     PEERS = []
