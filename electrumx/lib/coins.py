@@ -619,21 +619,11 @@ class Pexacoin(Ravencoin, Coin):
     TX_COUNT = 1
     TX_COUNT_HEIGHT = 1
     TX_PER_BLOCK = 1
+    X16RV2_ACTIVATION_TIME = 1568678400
     DESERIALIZER = lib_tx.DeserializerSegWit
     MEMPOOL_HISTOGRAM_REFRESH_SECS = 120
     PEERS = []
     GENESIS_HASH = ( 'a0fe25098b8560b76e4c9fdd28117bd06709515a9ccbbc1fa578e4c0443c0d02' )
-
-    @classmethod
-    def warn_old_client_on_tx_broadcast(cls, client_ver):
-        if client_ver < (3, 3, 3):
-            return ('<br/><br/>'
-                    'Your transaction was successfully broadcast.<br/><br/>'
-                    'However, you are using a VULNERABLE version of Electrum.<br/>'
-                    'Download the new version from the usual place:<br/>'
-                    'https://electrum.org/'
-                    '<br/><br/>')
-        return False
     
 
 
