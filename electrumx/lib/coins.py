@@ -3119,7 +3119,7 @@ class RavencoinTestnet(Ravencoin):
     ]
 
 
-class Pexacoin(Ravencoin, Coin):
+class Pexacoin(Ravencoin):
     NAME = "Pexacoin"
     SHORTNAME = "PEXA"
     TX_COUNT = 1
