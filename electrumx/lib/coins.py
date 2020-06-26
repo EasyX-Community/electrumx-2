@@ -616,9 +616,10 @@ class Bitcoin(BitcoinMixin, Coin):
 class Pexacoin(Bitcoin, Coin):
     NAME = "Pexacoin"
     SHORTNAME = "PEXA"
-    TX_COUNT = 0
-    TX_COUNT_HEIGHT = 0
-    TX_PER_BLOCK = 0
+    TX_COUNT = 1
+    TX_COUNT_HEIGHT = 1
+    TX_PER_BLOCK = 1
+    P2PKH_VERBYTE = bytes.fromhex("75") #Address starts with a x
     DESERIALIZER = lib_tx.DeserializerSegWit
     MEMPOOL_HISTOGRAM_REFRESH_SECS = 120
     PEERS = []
