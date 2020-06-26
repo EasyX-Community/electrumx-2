@@ -613,16 +613,12 @@ class Bitcoin(BitcoinMixin, Coin):
         return False
 
 
-class Pexacoin(Bitcoin, Coin):
+class Pexacoin(Ravencoin, Coin):
     NAME = "Pexacoin"
     SHORTNAME = "PEXA"
     TX_COUNT = 1
     TX_COUNT_HEIGHT = 1
     TX_PER_BLOCK = 1
-    XPUB_VERBYTES = ''
-    XPRV_VERBYTES = ''
-    P2PKH_VERBYTE = '' #Address starts with a x
-    P2SH_VERBYTES = []
     DESERIALIZER = lib_tx.DeserializerSegWit
     MEMPOOL_HISTOGRAM_REFRESH_SECS = 120
     PEERS = []
