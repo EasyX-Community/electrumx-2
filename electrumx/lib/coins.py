@@ -3097,7 +3097,7 @@ class Ravencoin(Coin):
             return x16r_hash.getPoWHash(header)
 
 
-class RavencoinTestnet(Ravencoin):
+class RavencoinTestnet(Ravencoin, Coin):
     NET = "testnet"
     XPUB_VERBYTES = bytes.fromhex("043587CF")
     XPRV_VERBYTES = bytes.fromhex("04358394")
