@@ -613,7 +613,7 @@ class Bitcoin(BitcoinMixin, Coin):
         return False
 
 
-class Pexacoin(BitcoinMixin, Coin):
+class Pexacoin(Bitcoin, Coin):
     NAME = "Pexacoin"
     SHORTNAME = "PEXA"
     TX_COUNT = 0
